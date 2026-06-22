@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NHL Shot Map Explorers</title>
+<style>
+:root{--burg:#6F263D;--blue:#236192;--ink:#0b1320;--muted:#5b6677;--line:#e6e9ef;--bg:#f6f8fb;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.hero{background:linear-gradient(135deg,#6F263D,#1b2a44);color:#fff;padding:54px 22px 46px;text-align:center}
+.hero h1{margin:0 0 10px;font-size:32px;letter-spacing:.2px}
+.hero p{margin:0 auto;max-width:640px;color:#dfe6f1;font-size:16px}
+.wrap{max-width:1000px;margin:-30px auto 0;padding:0 22px 70px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 6px 22px rgba(10,30,60,.08);display:flex;flex-direction:column}
+.tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:20px;color:#fff;align-self:flex-start}
+.tag.a{background:var(--burg)} .tag.b{background:var(--blue)}
+.card h2{margin:14px 0 8px;font-size:22px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:15px}
+.card ul{margin:0 0 20px;padding-left:18px;color:var(--muted);font-size:14px;flex:1}
+.card ul li{margin:4px 0}
+.btn{display:inline-block;text-decoration:none;text-align:center;font-weight:700;font-size:16px;padding:13px 20px;border-radius:12px;color:#fff}
+.btn.a{background:var(--burg)} .btn.b{background:var(--blue)}
+.btn:hover{filter:brightness(1.08)}
+.foot{text-align:center;color:var(--muted);font-size:13px;margin-top:34px}
+.foot a{color:var(--burg)}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>NHL Shot Map Explorers</h1>
+  <p>Interactive shot &amp; goal maps built from MoneyPuck data. Pick where you want to dig in.</p>
+</div>
+<div class="wrap">
+  <div class="grid">
+    <div class="card">
+      <span class="tag a">Team deep dive</span>
+      <h2>Colorado Avalanche — 19 Seasons</h2>
+      <ul>
+        <li>Full 2007-08 → 2025-26 history</li>
+        <li>Filter by season, venue, opponent, goalie, player &amp; strength</li>
+        <li>Goal &amp; finishing (goals-above-expected) leaderboards</li>
+        <li>Compare two seasons side by side</li>
+        <li>Analysis: era trends, the Landeskog impact study, Colorado vs. the league</li>
+      </ul>
+      <a class="btn a" href="avalanche_19season_explorer.html">Open the Avalanche explorer &rarr;</a>
+    </div>
+    <div class="card">
+      <span class="tag b">All 32 teams</span>
+      <h2>NHL Shot Map — Every Team</h2>
+      <ul>
+        <li>All 32 teams, 2021-22 → 2025-26</li>
+        <li>Colors automatically match the selected team</li>
+        <li>Same filters, leaderboards &amp; hover-for-goal-details</li>
+        <li>Compare any two teams side by side</li>
+      </ul>
+      <a class="btn b" href="nhl_team_shot_map.html">Open the NHL team map &rarr;</a>
+    </div>
+  </div>
+  <div class="foot">
+    Source data: <a href="https://moneypuck.com/data.htm" target="_blank" rel="noopener">MoneyPuck.com</a> · Not affiliated with MoneyPuck or the NHL.
+  </div>
+</div>
+</body>
+</html>
